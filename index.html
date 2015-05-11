@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html ng-app="APP">
+ <head>
+     
+     <title>IAT 235 - Information Architecture</title>
+     
+     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+     
+    <!-- Angular Material CSS now available via Google CDN; version 0.8 used here -->
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500italic,400italic' rel='stylesheet' type='text/css'>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/themes/beige.css" id="theme">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+<body>
+
+
+    <div ng-controller="AppCtrl" layout="column">
+      <section layout="row" flex>
+          
+        <!-- Left Nav -->
+          
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+          
+          <md-content ng-controller="LeftCtrl">
+          
+          <div ng-repeat="view in views">
+              
+                <md-toolbar class="toolbar" ng-if="$first">
+                    <div class="md-toolbar-tools">
+                        <h2>
+                          <span>{{view.name}}</span>
+                        </h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" ng-click="toggleFullscreen()" aria-label="Menu">
+                            <md-icon ng-if="!fullscreen" md-svg-icon="img/icons/fullscreen.svg"></md-icon>
+                            <md-icon ng-if="fullscreen" md-svg-icon="img/icons/exit-fullscreen.svg"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Menu">
+                          <md-icon md-svg-icon="img/icons/close.svg"></md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                
+                <md-toolbar ng-if="!$first" class="small">
+                    <h1 class="md-toolbar-tools">{{view.name}}</h1>
+                </md-toolbar>
+                
+                <div layout="column">
+                    <md-button ng-repeat="section in view.sections track by $index"
+                    ng-click="loadSection(view.name, $index)" class="section-button">
+                        {{section.name}}
+                    </md-button>
+                    <md-divider></md-divider>
+                </div>
+                
+            </div>
+            
+          </md-content>
+          
+        </md-sidenav>
+        
+        <!-- Main Content Section -->
+        
+        <md-content flex style="height:4000px">
+            
+            
+            <md-toolbar class="toolbar">
+                <div class="md-toolbar-tools">
+                    <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Menu">
+                      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                    </md-button>
+                    <h2>
+                      <span>{{currentSection.name}}</span>
+                    </h2>
+                </div>
+            </md-toolbar>
+            
+            
+            <div id="loading" ng-if="loading" layout="row" layout-sm="column" layout-align="space-around">
+              <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+            </div>
+            
+            <div ng-repeat="view in views">
+                
+                <section ng-repeat="section in view.sections" ng-if="currentSection.name == section.name">
+                    <div ng-bind-html="section.src | sanitize" class="content-section"></div>
+                </section>
+                
+            </div>
+            
+        </md-content>
+        
+        
+        <!--
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+          <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Sidenav Right</h1>
+          </md-toolbar>
+          <md-content ng-controller="RightCtrl" layout-padding>
+            <form>
+              <md-input-container>
+                <label for="testInput">Test input</label>
+                <input type="text" id="testInput"
+                       ng-model="data" md-sidenav-focus>
+              </md-input-container>
+            </form>
+            <md-button ng-click="close()" class="md-primary">
+              Close Sidenav Right
+            </md-button>
+          </md-content>
+        </md-sidenav>
+        -->
+        
+        
+        
+      </section>
+    </div>
+
+
+    <!-- Angular Material Dependencies -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <!-- Angular Material Javascript now available via Google CDN; version 0.8 used here -->
+    <script src="js/angular-material.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/reveal.js"></script>
+    
+    <script src="js/app.js"></script>
+    
+    
+</body>
+</html>

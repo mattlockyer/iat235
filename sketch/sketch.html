@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/sketch.js"></script>
+        <style>
+            body {
+                overflow:hidden;
+                margin:0;
+                padding:0;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+          $(function() {
+              
+                var canvas = null;
+              
+                var make = function() {
+                    if (canvas) document.body.removeChild(canvas);
+                    canvas = document.createElement('canvas');
+                    canvas.width = 900;
+                    canvas.height = 400;
+                    document.body.appendChild(canvas);
+                    $(canvas).sketch();
+                };
+                make();
+            
+                $(window).dblclick(make);
+          });
+        </script>
+    </body>
+</html>
