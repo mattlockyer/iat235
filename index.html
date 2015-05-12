@@ -48,9 +48,8 @@
                     <h1 class="md-toolbar-tools">{{view.name}}</h1>
                 </md-toolbar>
                 
-                <div layout="column">
-                    <md-button ng-repeat="section in view.sections track by $index"
-                    ng-click="loadSection(view.name, $index)" class="section-button">
+                <div layout="column" ng-repeat="section in view.sections track by $index">
+                    <md-button ng-click="loadSection(view.name, $index)" class="section-button">
                         {{section.name}}
                     </md-button>
                     <md-divider></md-divider>

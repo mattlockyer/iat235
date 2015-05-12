@@ -27,6 +27,12 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'Course Info',
                     fn:'syllabus.html'
+                },
+                {
+                    name:'Calendar',
+                    fn:'calendar.html',
+                    src:'<div style="text-align:center; margin:16px"><iframe src="https://www.google.com/calendar/embed?src=2n13sio8jc7vd2eolu88k956ns%40group.calendar.google.com&ctz=America/Vancouver" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe></div>',
+                    skipReveal:true
                 }
             ]
         },
@@ -46,7 +52,8 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
             sections:[
                 {
                     name:'Assignment 1',
-                    fn:'assignment-1.html'
+                    fn:'assignment-1.html',
+                    skipReveal:true
                 }
             ]
         },
@@ -55,8 +62,9 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
             dir:'projects',
             sections:[
                 {
-                    name:'Project 1',
-                    fn:'project-1.html'
+                    name:'Project 1: Scope',
+                    fn:'project-1.html',
+                    skipReveal:true
                 }
             ]
         }
@@ -69,9 +77,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
             $scope.toggleLeft();
             if (!$scope.$$phase) $scope.$apply();
             setTimeout(function() {
-                APP.initReveal();
+                if (!section.skipReveal) APP.initReveal();
                 $scope.loading = false;
                 if (!$scope.$$phase) $scope.$apply();
+                APP.resize();
             }, 100);
         };
         for (var i = 0; i < $scope.views.length; i++)
@@ -148,8 +157,7 @@ APP.load = function(fn, callback) {
 
 APP.resize = function() {
     var section = document.querySelectorAll('.content-section')[0];
-    section.style.height = (window.innerHeight-64) + 'px';
-    console.log('resized');
+    section.style.height = (window.innerHeight-48) + 'px';
 };
 window.onresize = APP.resize;
 
