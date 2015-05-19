@@ -51,3 +51,9 @@ a {
 .heading {
     text-decoration:underline;
 }
+
+.col-2 {
+    width:420px;
+    margin:16px !important;
+    float:left;
+}

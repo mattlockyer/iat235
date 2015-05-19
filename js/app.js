@@ -48,6 +48,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'01: What is Information?',
                     fn:'lecture-1.html'
+                },
+                {
+                    name:'02: Context vs. Content',
+                    fn:'lecture-2.html'
                 }
             ]
         },
