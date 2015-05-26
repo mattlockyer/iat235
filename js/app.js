@@ -57,6 +57,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'02: Context vs. Content',
                     fn:'lecture-2.html'
+                },
+                {
+                    name:'03: Information Architecture',
+                    fn:'lecture-3.html'
                 }
             ]
         },
