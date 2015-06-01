@@ -86,6 +86,11 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                     name:'Assignment 1',
                     fn:'assignment-1.html',
                     skipReveal:true
+                },
+                {
+                    name:'Assignment 2',
+                    fn:'assignment-2.html',
+                    skipReveal:true
                 }
             ]
         },
@@ -96,6 +101,11 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'Project 1: Scope',
                     fn:'project-1.html',
+                    skipReveal:true
+                },
+                {
+                    name:'Project 2: Wireframing',
+                    fn:'project-2.html',
                     skipReveal:true
                 }
             ]
