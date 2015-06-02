@@ -61,6 +61,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'03: Information Architecture',
                     fn:'lecture-3.html'
+                },
+                {
+                    name:'04: Wireframes and Web',
+                    fn:'lecture-4.html'
                 }
             ]
         },
