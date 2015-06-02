@@ -39,6 +39,11 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                     skipReveal:true
                 },
                 {
+                    name:'Tools',
+                    fn:'tools.html',
+                    skipReveal:true
+                },
+                {
                     name:'Calendar',
                     fn:'calendar.html',
                     src:'<div class="content"><iframe src="https://www.google.com/calendar/embed?src=2n13sio8jc7vd2eolu88k956ns%40group.calendar.google.com&ctz=America/Vancouver" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe></div>',
