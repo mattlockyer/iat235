@@ -75,6 +75,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'04: Wireframes and Web',
                     fn:'lecture-4.html'
+                },
+                {
+                    name:'05: Markup',
+                    fn:'lecture-5.html'
                 }
             ]
         },
@@ -141,6 +145,7 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 $scope.loading = false;
                 if (!$scope.$$phase) $scope.$apply();
                 APP.resize();
+                //APP.codify();
             }, 100);
         };
         for (var i = 0; i < $scope.views.length; i++)

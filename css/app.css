@@ -51,6 +51,13 @@ a {
     min-height:0;
 }
 
+.code {
+    font-family:Courier;
+    font-size:24px;
+    width:900px;
+    height:64px;
+}
+
 .highlight {
     background-color:yellow;
 }
