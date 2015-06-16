@@ -79,6 +79,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'05: Markup',
                     fn:'lecture-5.html'
+                },
+                {
+                    name:'06: Structure',
+                    fn:'lecture-6.html'
                 }
             ]
         },
@@ -116,6 +120,11 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'Assignment 2',
                     fn:'assignment-2.html',
+                    skipReveal:true
+                },
+                {
+                    name:'Assignment 3',
+                    fn:'assignment-3.html',
                     skipReveal:true
                 }
             ]

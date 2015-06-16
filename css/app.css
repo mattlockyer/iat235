@@ -58,6 +58,14 @@ a {
     height:64px;
 }
 
+.codearea-short {
+    font-family:Courier;
+    font-size:24px;
+    width:900px;
+    height:300px;
+    margin:16px;
+}
+
 .highlight {
     background-color:yellow;
 }
