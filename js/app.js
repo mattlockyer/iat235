@@ -105,6 +105,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'Lab 04',
                     fn:'lab-4.html'
+                },
+                {
+                    name:'Lab 05',
+                    fn:'lab-5.html'
                 }
             ]
         },
