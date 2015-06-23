@@ -150,6 +150,11 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                     name:'Project 2: Wireframing',
                     fn:'project-2.html',
                     skipReveal:true
+                },
+                {
+                    name:'Project 3: Your Site',
+                    fn:'project-3.html',
+                    skipReveal:true
                 }
             ]
         }
