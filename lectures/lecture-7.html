@@ -1,0 +1,256 @@
+
+
+<div class="reveal">
+    <div class="slides">
+                
+        
+        <section>
+            <h1>Responsive Design</h1>
+        </section>
+        <section>
+          <h2>Why A03 is Hideous</h2>
+          <p>
+            We want to see you building out elements that you would likely use in your larger online services website, to ensure
+            <strong>valid code</strong>
+            and
+            <strong>semantic markup.</strong>
+          </p>
+          <p>
+            Yes, it is that simple.
+          </p>
+        </section>
+        <section>
+          <h2>HTML and CSS</h2>
+          <p>
+            Remember that the markup of your content and your styling
+            <strong>must remain separated.</strong>
+          </p>
+          <p class="heading">
+            Things we
+            <strong>should not</strong>
+            see:
+          </p>
+          <ul>
+            <li>&lt;b&gt;, &lt;i&gt;, &lt;u&gt; tags</li>
+            <li>
+              Using &lt;br&gt; to
+              <em>non-semantically</em>
+              separate things (i.e. to just add spaces)
+            </li>
+            <li>
+              Use of the
+              <em>style</em>
+              attribute in a tag
+              (i.e. do not do &lt;p style=""&gt;)
+            </li>
+          </ul>
+        </section>
+       
+       
+        <section>
+          <h2>Responsive vs Adaptive</h2>
+          <img alt="An animated gif illustrating the differences between responsive and adaptive web design" src="lectures/img/responsive-adaptive.gif" height="400" width="1100">
+          <br>
+            <a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/" target="_blank">9 Basic Principles of Responsive Web Design</a>
+        </section>
+        <section>
+          <h2>Elements of Responsive Design</h2>
+          <p class="heading">The pieces you need:</p>
+          <ul>
+            <li>Relative units</li>
+            <li>Fluid grids</li>
+            <li>Media queries</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2 class="highlight">What Are Relative Units?</h2>
+          <textarea class="codearea-short">
+p {
+    width: 0;
+}
+          </textarea>
+        </section>
+        
+        <section>
+          <h2>Fluid Grids</h2>
+          <iframe src="sketch/sketch.html" class="sketch"> </iframe>
+        </section>
+        
+        <section>
+          <h2>Floating</h2>
+          <h3>Not on water...</h3>
+          <div style="background-color: #DDD; margin-top: 1rem">
+            <div style="height:200px; width:100px; background-color: blue;"></div>
+            <p>Here is some text that we need to wrap around our block.</p>
+            <p>This is some text that we do not want to wrap.</p>
+          </div>
+        </section>
+        <section>
+          <h2>Breakpoints</h2>
+          <img alt="An animated gif illustrating how breakpoints work" src="lectures/img/breakpoints.gif" height="400" width="1100">
+          <br>
+            <a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/" target="_blank">9 Basic Principles of Responsive Web Design</a>
+        </section>
+        
+        <section>
+          <h2>Media Queries and Breakpoints</h2>
+          <textarea class="codearea-short">
+@media (max-width: 40em) {
+    width: 0;
+}
+</textarea>
+        </section>
+        
+        <section>
+          <h2>Media queries</h2>
+          <iframe data-src="http://mediaqueri.es/" class="sketch"></iframe>
+          <a href="http://mediaqueri.es" target="_blank">Examples of media queries in action</a>
+        </section>
+        
+        <section>
+          <h2>What Media Queries Know</h2>
+          <ul>
+            <li>width, height</li>
+            <li>device-width, device-height</li>
+            <li>orientation</li>
+            <li>aspect-ratio, device-aspect-ratio</li>
+            <li>color, color-index, monochrome</li>
+            <li>resolution</li>
+            <li>scan</li>
+            <li>grid</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Responsive vs Adaptive</h2>
+          <img alt="An animated gif illustrating the differences between responsive and adaptive web design" src="lectures/img/responsive-adaptive.gif" height="400" width="1100">
+          <br>
+          <cite>
+            <a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/" target="_blank">9 Basic Principles of Responsive Web Design</a>
+          </cite>
+        </section>
+        
+        
+        <section>
+          <h2>Progressive Enhancement</h2>
+          <h3>Build up from the basics</h3>
+          <p class="heading">The layering of progressive enhancement</p>
+          <ul>
+            <li>
+              <em>Content:</em>
+              Ensuring that the basic content works (clean, semantic, HTML)
+            </li>
+            <li>
+              <em>Styling:</em>
+              Applying styling and testing across devices (
+              <a href="http://caniuse.com" target="_blank">caniuse?</a>
+              + CSS)
+            </li>
+            <li>
+              <em>Enhancing:</em>
+              Enhancing the experience as much as possible through use of advanced CSS or Javascript.
+            </li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Responsive vs Adaptive</h2>
+          <h3>All in the name</h3>
+          <p>
+            <strong>Responsive web design</strong>
+            will respond to fit different displays, while
+            <strong>adaptive web design</strong>
+            targets and adapts to specific display considerations.
+          </p>
+        </section>
+        
+        <section>
+          <h2>Testing Grounds</h2>
+          <iframe src="http://bradfrostweb.com/demo/ish/" height="600" width="1000"></iframe>
+          <a href="http://bradfrostweb.com/demo/ish/" target="_blank">ish. yet another viewport resizer.</a>
+        </section>
+        
+        
+        <section>
+          <h2>Can I Use?</h2>
+          <iframe data-src="http://caniuse.com" height="600" width="1000"></iframe>
+          <a href="http://caniuse.com" target="_blank">Can I Use?</a>
+        </section>
+       
+        <section>
+          <h2>When viewing our designs</h2>
+          <ol>
+            <li>What is the simplest 'context of use'?</li>
+            <li>Where does it 'break'?</li>
+            <li>How to keep it 'consistent'?</li>
+          </ol>
+        </section>
+        
+        <section>
+          <h2>Breakpoints: When to Query?</h2>
+          <h3>Where and when should our web layout collapse?</h3>
+          <ul>
+            <li>Let your content decide</li>
+            <li>Use relative units (always)</li>
+            <li>Grids are your bestest friends</li>
+            <li>Avoid an absolute process</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>The Box Model</h2>
+          <iframe src="http://boxmodel.interactivedesignlab.com/" height="600" width="1000"></iframe>
+            <a href="http://boxmodel.interactivedesignlab.com/" target="_blank">Interactive Box Model</a>
+        </section>
+        
+        <section>
+          <h2>Content-box vs border-box</h2>
+          
+          <iframe height='500' scrolling='no' src='//codepen.io/mattlockyer/embed/yNPaKY/?height=500&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mattlockyer/pen/yNPaKY/'>yNPaKY</a> by Matt Lockyer (<a href='http://codepen.io/mattlockyer'>@mattlockyer</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+          
+        </section>
+        
+        
+        <section>
+          <h2>Grids</h2>
+          
+          <iframe height='500' scrolling='no' src='//codepen.io/chriscoyier/embed/eGcLw/?height=500&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/chriscoyier/pen/eGcLw/'>Don't Overthink It Grids</a> by Chris Coyier (<a href='http://codepen.io/chriscoyier'>@chriscoyier</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+          
+          <a href="http://css-tricks.com/dont-overthink-it-grids/">Don't Overthing Grids</a>
+        </section>
+        
+        
+        
+        <section>
+          <h2>Validate, validate, validate...</h2>
+          <iframe height="600" src="http://jigsaw.w3.org/css-validator/" width="1000"></iframe>
+        </section>
+        
+        <section>
+          <h2>Why Do Invalid Sites Still Work?</h2>
+          <h3>Browsers are kind, benevolent beings</h3>
+          <p>Browsers are more likely to ignore errors then tell you about them. This makes it easier for you to make websites that 'render', but will not work consistently in the future.</p>
+        </section>
+        
+        <section>
+          <h2>This week's labs</h2>
+          <ul>
+            <li>Project 2 Presentations</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Next Week's Lecture</h2>
+          <p>More on web layout.</p>
+        </section>
+        
+        
+        <section>
+          <h1>That's it!</h1>
+        </section>
+
+    </div>
+</div>
