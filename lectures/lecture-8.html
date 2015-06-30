@@ -1,0 +1,207 @@
+
+
+
+<div class="reveal">
+    <div class="slides">
+                
+        <section>
+          <h1>Layout</h1>
+        </section>
+       
+        <section>
+          <h2>Readability</h2>
+          <p>
+            <em>If I cannot read it, I will not stay on the website.</em>
+            <p>Playful text is fun, but please remember that we need to be able to read the words that we are looking at. That means high-contrast and clear type is essential.</p>
+          </p>
+        </section>
+        
+        <section>
+          <h2>Mystery Navigation</h2>
+          <iframe data-src="http://www.bluebell.com/" height="500" width="1000"></iframe>
+          <a href="http://www.bluebell.com" target="_blank">Blue Bell Ice Cream</a>
+        </section>
+        
+        <section class="slide" id="the-myth-of-the-fold">
+          <h2>The myth of the fold</h2>
+          <iframe data-src="http://iampaddy.com/lifebelow600/" height="500" width="1000"></iframe>
+          <a href="http://iampaddy.com/lifebelow600/" target="_blank">Life Below 600</a>
+        </section>
+        
+        <section>
+          <h2>Register before use</h2>
+          <p>
+            <em>If I have to register before using/purchasing, I will not stay on the website.</em>
+          </p>
+          <blockquote>"We were wrong about first-time shoppers. They did mind registering. As one shopper told us, 'I am not here to enter into a relationship. I just want to buy something.'"</blockquote>
+          <cite>
+            <a href="http://www.uie.com/articles/three_hund_million_button/" target="_blank">"The $300 Million Button"</a>
+            (User Interface Engineering)
+          </cite>
+        </section>
+        
+        <section>
+          <h2>Non-semantic markup</h2>
+          <p>
+            <em>If a search-engine can't see it, I will not find the website.</em>
+          </p>
+          <iframe data-src="http://www.ssoutdooradventures.com/" height="500" width="1000"></iframe>
+          <a href="http://www.ssoutdooradventures.com" target="_blank">S&amp;S Outdoor Adventures</a>
+        </section>
+        
+        <section>
+          <h2>Ad Blindness</h2>
+          <p>
+            <em>If it looks like an ad, I will not see it.</em>
+          </p>
+          <img alt="Spotlight" src="lectures/img/ad-blind.jpg" />
+          <cite>
+            From
+            <a href="http://www.nngroup.com/articles/banner-blindness-old-and-new-findings/" target="_blank">Banner Blindess Findings (NNGroup)</a>
+          </cite>
+        </section>
+        <section>
+          <h2>Genericism</h2>
+          <p>
+            <em>If it doesn't explain what it does, I fear the result.</em>
+          </p>
+          <div style="margin: 1em 0; padding: 1.5em 1.75em; font-weight: bold; font-size: 2em; background-color: #F3A178; color: #FFF;">
+            Click here
+            <div style="float:right">
+              (muahahahhah-hahahh-haha)
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Interface Experience</h2>
+          <div style="float:left">
+            <img alt="Maslow's hierarchy of needs converted to web-design consideration" class="zoomable" height="300" src="lectures/img/maslow.png" width="431">
+          </div>
+          <div style="float:left">
+            <img alt="Maslow's hierarchy of needs converted to web-design consideration" class="zoomable" height="300" src="lectures/img/maslow-for-web.png" width="424">
+          </div>
+          <div style="clear:both;"></div>
+          <cite>
+            From
+            <a href="http://www.abookapart.com/products/designing-for-emotion" target="_blank">Designing for Emotion</a>
+            (Aarron Walter)
+          </cite>
+        </section>
+        
+        <section>
+          <h2>Neilsen vs Norman</h2>
+          <blockquote>"Good design means that beauty and usability are in balance. An object that is beautiful to the core is no better than one that is only pretty if they both lack usability"</blockquote>
+          <cite>
+            <a href="http://www.jnd.org/dn.mss/emotion_design_at.html" target="_blank">Emotion and Design: Attractive things work better</a>
+            (Don Norman)
+          </cite>
+        </section>
+        
+        <section class="slide" id="css-specificity">
+          <h2>CSS Specificity Order</h2>
+          <p class="heading">The short answer:</p>
+          <ol>
+            <li>
+              Inline Styles (NEVER USE THEM)
+            </li>
+            <li>
+              <em>ID's:</em>
+              #home, #nav-bar
+            </li>
+            <li>
+              <em>Classes, attributes & pseudo-classes:</em>
+              .home, [class], :hover
+            </li>
+          </ol>
+          <p class="heading">The long answer:</p>
+          <ul>
+            <li>The more specific you select something, the higher the specificity. (i.e. "nav a {}" is more specific then "a {}")</li>
+            <li>The last rule... rules</li>
+          </ul>
+          <p>
+            <a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">The longest answer (from Smashing Magazine)</a>
+          </p>
+        </section>
+        
+        
+        
+        
+        
+        <section class="slide" id="our-second-stylesheet">
+          <h2>CSS Review</h2>
+          <ul>
+              <li>
+                  <a href="http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import">Adding CSS to HTML</a>
+              </li>
+              <li>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model">The Box Model</a>
+              </li>
+              <li>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente">Inline</a> and <a href="https://developer.mozilla.org/en/docs/Web/HTML/Block-level_elements">Block</a> Elements
+              </li>
+          </ul>
+        </section>
+        
+        
+        <section>
+            <h2>Useful Layout Articles</h2>
+            <ul>
+                <li>
+                    <a href="http://snook.ca/archives/html_and_css/six_keys_to_understanding_css_layouts">Six Keys to Understanding CSS Layouts</a>
+                </li>
+                <li>
+                    <a href="http://www.sitepoint.com/css-architectures-new-best-practices/">CSS Architectures: New Best Practices</a>
+                </li>
+                <li>
+                    <a href="http://learnlayout.com/">Learn CSS Layouts: Tutorial</a>
+                </li>
+                <li>
+                    <a href="http://designshack.net/articles/css/farewell-floats-the-future-of-css-layout/">Flexbox: Farewell to Floats</a>
+                </li>
+                <li>
+                    <a href="http://flexiejs.com/playground/">Flexbox Playground</a>
+                </li>
+                <li>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>
+                </li>
+                <li>
+                    <a href="https://css-tricks.com/flexbox-nav-bar-fixed-variable-take-rest-elements/">Flexbox Nav Example</a>
+                </li>
+                <li>
+                    <a href="http://updates.html5rocks.com/2013/10/Flexbox-layout-isn-t-slow">Flexbox Layout Isn't Slow</a>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Flexbox Example</h2>
+            <iframe height='500' scrolling='no' src='//codepen.io/mattlockyer/embed/mJpNGx/?height=500&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mattlockyer/pen/mJpNGx/'>mJpNGx</a> by Matt Lockyer (<a href='http://codepen.io/mattlockyer'>@mattlockyer</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+        </section>
+        
+        
+        
+        <section class="slide" id="validate-validate-validate">
+          <h2>Validate, validate, validate</h2>
+          <iframe allowFullScreen="true" class="scale" data-src="http://jigsaw.w3.org/css-validator/" frameborder="0" height="600" width="1000"></iframe>
+        </section>
+        
+        <section class="slide" id="next-week-also">
+          <h2>Next week's lecture</h2>
+          <ul>
+              <li>Quiz</li>
+              <li>Support Questions</li>
+          </ul>
+        </section>
+        
+        <section class="slide" id="this-weeks-labs">
+          <h1>No Labs This Week</h1>
+        </section>
+        
+        <section class="slide" id="contacting-andrew">
+          <h1>That's It</h1>
+        </section>
+
+    </div>
+</div>
+

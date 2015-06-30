@@ -87,6 +87,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'07: Responsive',
                     fn:'lecture-7.html'
+                },
+                {
+                    name:'08: Layout',
+                    fn:'lecture-8.html'
                 }
             ]
         },
