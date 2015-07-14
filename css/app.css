@@ -51,11 +51,23 @@ a {
     min-height:0;
 }
 
+.code-font {
+    font-family:Courier !important;
+}
+
 .code {
     font-family:Courier;
     font-size:24px;
     width:900px;
     height:64px;
+}
+
+.codearea {
+    font-family:Courier;
+    font-size:24px;
+    width:900px;
+    height:500px;
+    margin:16px;
 }
 
 .codearea-short {

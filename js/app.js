@@ -91,6 +91,10 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                 {
                     name:'08: Layout',
                     fn:'lecture-8.html'
+                },
+                {
+                    name:'09: Selectors',
+                    fn:'lecture-9.html'
                 }
             ]
         },

@@ -1,0 +1,291 @@
+
+
+
+<div class="reveal">
+    <div class="slides">
+                
+        <section>
+          <h1>Styling</h1>
+        </section>
+       
+        <section>
+          <h2>Final Project Recap</h2>
+          <ul>
+              <li>Redesign of Craigslist Section</li>
+              <li>Focus on Layout, Structure and Hierarchy of Information</li>
+              <li>Finding an Item</li>
+              <li>Posting an Item</li>
+              <li>Responsive Design (this week and next)</li>
+              <li>Polished Design (final weeks)</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Structure your Submissions</h2>
+          <p>Please include an index.html file that takes the user to your first page!</p>
+          <p>Every website is a folder of documents, index.html is the default file served up.</p>
+          <p>Check out some info on <a href="http://www.htmlquick.com/tutorials/organizing-website.html">file structure</a>.</p>
+        </section>
+        
+        <section>
+          <h2>Plagiarism</h2>
+          <ul>
+              <li>Cite ALL Sources</li>
+              <li>Do NOT Copy Templates</li>
+              <li>Learn, Mimic, Adapt, Modify but DO NOT COPY</li>
+              <li>Produce a Cohesive Final Project</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Frameworks</h2>
+          <h1>NO</h1>
+          <p>You are NOT allowed to use any CSS or JS frameworks that provide grids, layouts, styling, animations etc...</p>
+          <p>This course is about developing your skillz</p>
+        </section>
+        
+        <section>
+          <h2>Sass / Less</h2>
+          <h1>FINE</h1>
+          <p>But don't bother your TAs with questions about Sass and Less...</p>
+          <p>If you want to streamline the way you write CSS that's your deal.</p>
+          <p>We will help you with the COMPILED CSS ONLY</p>
+        </section>
+        
+        
+        
+        <section>
+          <h1>Selectors</h1>
+        </section>
+        
+        <section>
+          <h2>Selectors - Element</h2>
+          <ul>
+              <li class="code-font">div</li>
+              <li class="code-font">section</li>
+              <li class="code-font">nav</li>
+              <li class="code-font">button</li>
+          </ul>
+          <p>What are some drawbacks?</p>
+        </section>
+        
+        <section>
+          <h2>Selectors - Class</h2>
+          <ul>
+              <li class="code-font">.header</li>
+              <li class="code-font">.navbar</li>
+              <li class="code-font">.main</li>
+              <li class="code-font">.footer</li>
+          </ul>
+          <p>Given element and class selectors what else can we do?</p>
+        </section>
+        
+        <section>
+          <h2>Selectors - IDs</h2>
+          <ul>
+              <li class="code-font">#header</li>
+              <li class="code-font">#navbar</li>
+              <li class="code-font">#main</li>
+              <li class="code-font">#footer</li>
+          </ul>
+          <p>What is the difference between IDs and classes? Are IDs more appropriate for these sections?</p>
+        </section>
+        
+        <section>
+          <h2>Selectors - Multiple</h2>
+          <p class="code-font">.heading1, .heading2, .description, .date</p>
+          <p>If all of these elements share the same font, we can put that font in one CSS rule.</p>
+        </section>
+        
+        <section>
+          <h2>Selectors - Nested</h2>
+          <p class="code-font">#header #navbar ul li .button</p>
+          <p>or...</p>
+          <p class="code-font">.nav-button</p>
+          <p>You can get really specific, but you should do so in a sensible way...</p>
+        </section>
+        
+        <section>
+          <h2>Selectors - Relationships</h2>
+          <ul>
+              <li>A E - any child or child of a child all the way down (nested)</li>
+              <li>A > E - any child (direct descendant only)</li>
+              <li>E:first-child - the first child of the parent</li>
+              <li>A + E - the next sibling of A only</li>
+              <li>A ~ E - all siblings following A</li>
+          </ul>
+          <p><strong>You can get really specific, but you should do so in a sensible way...</strong></p>
+        </section>
+        
+        <section>
+          <h1>Selectors - Notes</h1>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors">MDN Selectors</a><br />
+          <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">30 CSS Selectors</a><br />
+          <a href="http://thesassway.com/beginner/the-inception-rule">Nested Selectors - the inception rule</a>
+        </section>
+        
+        
+        
+        <section>
+          <h1>Styling</h1>
+        </section>
+        
+        <section>
+          <h2>WARNING</h2>
+          <p>Stop using tags: i, bold, strong, center, etc...</p>
+          <P>Do not insert breaks (br tags) or spaces (&#38;nbsp;)</P>
+          <h1>!!!BAD!!!</h1>
+          <p>Your HTML is structure and content ONLY</p>
+          <p>CSS is your Style</p>
+        </section>
+        
+        <section>
+            <h2>Reset CSS</h2>
+            <p>Having trouble with some default margins, padding, fonts, etc...?</p>
+            <a href="https://necolas.github.io/normalize.css/">Normalize CSS</a>
+            <a href="http://meyerweb.com/eric/tools/css/reset/">Reset CSS</a>
+        </section>
+        
+        <section>
+          <h2>Classes for Everyone</h2>
+          <p>Put classes on elements that are styled the same, or share some common style properties</p>
+          <p>What are some examples?</p>
+        </section>
+        
+        <section>
+          <h2>Styling a Div</h2>
+          <p class="code-font">.myDiv { border:1px solid black; }</p>
+          <p>You've seen me do this, but what else can we style?</p>
+        </section>
+        
+        <section>
+          <h2>Styling a Div 2</h2>
+          <textarea class="codearea-short">
+.myDiv {
+    color:red; /* font color */
+    font-weight:bold;
+    font-size:24px;
+    ... blah blah blah ...
+}
+          </textarea>
+          <p>The truth is, you can probably achieve any visual, typographical, etc style you can imagine...</p>
+        </section>
+        
+        <section>
+          <h1>Styling - Refs</h1>
+          <a href="http://www.smashingmagazine.com/2009/08/03/mastering-css-styling-design-elements/">Styling Elements</a><br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms">Styling Forms</a><br />
+          <a href="http://www.sitepoint.com/html5-forms-css/">HTML5 Forms</a><br />
+          <a href="https://css-tricks.com/css-style-guides/">CSS Style Guides</a>
+        </section>
+        
+        
+        
+        <section>
+          <h1>Backgrounds</h1>
+        </section>
+        
+        <section>
+          <h2>Background Options</h2>
+          <p class="code-font">background: green;</p>
+          <p class="code-font">background: url("bg.jpg") repeat-y;</p>
+          <p class="code-font">background: url("bg.png") #00D repeat-y fixed;</p>
+          <p>There are 1001 ways to create an apply a background image! This will require some testing...</p>
+        </section>
+        
+        <section>
+          <h2>Background Where?</h2>
+          <p>Backgrounds can be applied to elements not just the body of the page.</p>
+          <p>Use combinations of background color, image and gradient with pseudo selectors to jazz up your interactive elements (buttons and menus).</p>
+          <p>WARNING What does all this glitter actually provide for your user?</p>
+          <h2>DEFEND YOUR DESIGNS</h2>
+        </section>
+        
+        <section>
+          <h1>Background - Refs</h1>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">Background Reference</a><br />
+          <a href="https://developer.mozilla.org/samples/cssref/background-image.html">Background Example</a><br />
+          <a href="https://developer.mozilla.org/samples/cssref/background-position/">Background Position Example</a><br />
+          <a href="https://css-tricks.com/examples/CSS3Gradient/">Background Gradient Example</a>
+        </section>
+        
+        
+        
+        <section>
+          <h1>Fonts</h1>
+        </section>
+        
+        <section>
+          <h2>Specifying a Font</h2>
+          <p class="code-font">font: 2em "Open Sans", sans-serif;</p>
+          <p class="code-font">font: italic 2em "Open Sans", sans-serif;</p>
+          <p class="code-font">font: italic small-caps bolder 16px/3 cursive;</p>
+          <p>One CSS property with many different formats... probably should do some reading on these!</p>
+        </section>
+        
+        <section>
+          <h2>Global Styles</h2>
+          <p class="code-font">font: inherit;</p>
+          <p class="code-font">font: initial;</p>
+          <p class="code-font">font: unset;</p>
+          <p>Get font from parent (inherit), from default (initial), or default if not specified in parent (unset)</p>
+          <p>These keywords can be applied to any CSS property!</p>
+        </section>
+        
+        <section>
+          <h2>Set Separately</h2>
+          <p class="code-font">font-style: ...;</p>
+          <p class="code-font">font-weight: ...;</p>
+          <p class="code-font">font-family: ...;</p>
+          <p class="code-font">font-variant: ...;</p>
+          <p class="code-font">font-stretch: ...;</p>
+          <p class="code-font">font-size: ...;</p>
+          <p>Time for some reading!</p>
+        </section>
+        
+        <section>
+          <h2>Custom Fonts</h2>
+          <textarea class="codearea-short">
+@font-face {
+  font-family: MyHelvetica;
+  src: url(MgOpenModernaBold.ttf);
+  font-weight: bold;
+}
+/* usage */
+.myParagraph {
+  font-family: MyHelvetica;
+}
+          </textarea>
+          <p>Warning certain browsers only support limited font types (Chrome definitely supports .woff2)</p>
+        </section>
+        
+        <section>
+          <h2>Import Fonts</h2>
+          <p>In HEAD tag:</p>
+          <textarea class="code">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+          </textarea>
+          <p>CSS:</p>
+          <textarea class="code">
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+          </textarea>
+          <p>Check out Google Fonts in the Refs!</p>
+        </section>
+        
+        <section>
+          <h1>Fonts - Refs</h1>
+          <a href="https://www.google.com/fonts">Google Fonts</a><br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">font</a><br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a><br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%40font-face">@font-face</a><br />
+        </section>
+        
+        
+        
+        <section class="slide" id="contacting-andrew">
+          <h1>That's It</h1>
+        </section>
+
+    </div>
+</div>
+
