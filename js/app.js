@@ -97,12 +97,12 @@ APP.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log)
                     fn:'lecture-9.html'
                 },
                 {
-                    name:'10: CSS Animation',
-                    fn:'lecture-10.html'
+                    name:'10: Javascript',
+                    fn:'lecture-11.html'
                 },
                 {
-                    name:'11: Javascript',
-                    fn:'lecture-11.html'
+                    name:'11: CSS Animation',
+                    fn:'lecture-10.html'
                 }
             ]
         },
