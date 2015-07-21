@@ -1,0 +1,201 @@
+
+
+
+<div class="reveal">
+    <div class="slides">
+                
+        <section>
+          <h1>Javascript</h1>
+        </section>
+       
+        <section>
+          <h2>Final Project Recap</h2>
+          <ul>
+              <li>Redesign of Craigslist Section</li>
+              <li>Focus on Layout, Structure and Hierarchy of Information</li>
+              <li>Finding an Item</li>
+              <li>Posting an Item</li>
+              <li>Responsive Design (this week and next)</li>
+              <li>Polished Design (final weeks)</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Structure your Submissions</h2>
+          <p>Please include an index.html file that takes the user to your first page!</p>
+          <p>Every website is a folder of documents, index.html is the default file served up.</p>
+          <p>Check out some info on <a href="http://www.htmlquick.com/tutorials/organizing-website.html">file structure</a>.</p>
+        </section>
+        
+        <section>
+          <h2>Plagiarism</h2>
+          <ul>
+              <li>Cite ALL Sources</li>
+              <li>Do NOT Copy Templates</li>
+              <li>Learn, Mimic, Adapt, Modify but DO NOT COPY</li>
+              <li>Produce a Cohesive Final Project</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Frameworks</h2>
+          <h1>NO</h1>
+          <p>You are NOT allowed to use any CSS or JS frameworks that provide grids, layouts, styling, animations etc...</p>
+          <p>This course is about developing your skillz</p>
+        </section>
+        
+        <section>
+          <h2>Sass / Less</h2>
+          <h1>FINE</h1>
+          <p>But don't bother your TAs with questions about Sass and Less...</p>
+          <p>If you want to streamline the way you write CSS that's your deal.</p>
+          <p>We will help you with the COMPILED CSS ONLY</p>
+        </section>
+        
+        
+        
+        <section>
+          <h1>Javascript Background</h1>
+        </section>
+        
+        <section>
+            <h2>Javascript History</h2>
+            <p>JavaScript was invented by Brendan Eich in a relatively short period of time to provide a programming interface to handle user interactions with elements in the DOM.</p>
+            <p>Events such as click and mouseup were provided as listeners, allowing coders to attach functions to these handle these events.</p>
+            <p>Since this basic implementation, JavaScript has evolved to fascilitate object oriented, full application, server side and hardware programming.</p>
+        </section>
+        
+        <section>
+            <h2>Why Javascript?</h2>
+            <p>JavaScript is incredibly flexible, has no types and fail gracefully.</p>
+            <p>While these points can be incredibly powerful, they can also make debugging and building large JavaScript applications difficult.</p>
+            <p>We won't get into all the ins and outs of JavaScript and we'll stick to the basics of Brendan's original implementation, so debugging your scripts shouldn't become too difficult.</p>
+        </section>
+        
+        <section>
+            <h2>Selecting Elements</h2>
+            <ul>
+                <li class="code-font">var el = document.getElementById('id');</li>
+                <li class="code-font">var el = document.querySelector('#id');</li>
+                <li class="code-font">var els = document.querySelectorAll('#id, #id2');</li>
+                <li class="code-font">var els = document.querySelectorAll('.class');</li>
+                <li class="code-font">var els = document.querySelectorAll('div');</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Selecting Elements</h2>
+            <p>We can get references to elements using JavaScript.</p>
+            <p>You can select 1 or many elements. If you select many, they will be returned in an array in the order they are specified in the html</p>
+        </section>
+        
+        <section>
+            <h2>Selecting Elements Example</h2>
+            <iframe height='500' scrolling='no' src='//codepen.io/mattlockyer/embed/JdaGYp/?height=500&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mattlockyer/pen/JdaGYp/'>JdaGYp</a> by Matt Lockyer (<a href='http://codepen.io/mattlockyer'>@mattlockyer</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+        </section>
+        
+        <section>
+            <h2>Selecting Elements</h2>
+            <p>
+                Notice how selecting elements using <span class="code-font highlight">querySelector</span> and <span class="code-font highlight">querySelectorAll</span> use the same syntax as CSS selectors?
+            </p>
+            <p>FACT: those two JavaScript functions return exactly what you would expect if you use CSS Selectors.</p>
+            <p><span class="code-font highlight">querySelector</span> will return the first element matching the selector in the DOM and <span class="code-font highlight">querySelectorAll</span> will return all elements matching the selector in the DOM.</p>
+        </section>
+        
+        <section>
+            <h2>Javascript Functions</h2>
+            <textarea class="codearea">
+function click(e) {
+    console.log(e.type, e.target);
+    //prints the type of event (probably a click)
+    //also prints the target element
+    //this is the element that triggered this click function
+}
+            </textarea>
+        </section>
+        
+        <section>
+            <h2>Attaching a listener function</h2>
+            <textarea class="codearea">
+var el = document.querySelector('#id');
+el.onclick = function(e) {
+  console.log(e.type, e.target);
+}
+//notice the function doesn't have a name?
+//this is an anonymous function, but it's ok
+//because it's attached to an event
+            </textarea>
+        </section>
+        
+        <section>
+            <h2>Event Listener Example</h2>
+            <iframe height='500' scrolling='no' src='//codepen.io/mattlockyer/embed/GJXoZe/?height=500&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mattlockyer/pen/GJXoZe/'>GJXoZe</a> by Matt Lockyer (<a href='http://codepen.io/mattlockyer'>@mattlockyer</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+        </section>
+        
+        <section>
+            <h1>Manipulating CSS</h1>
+            <p>Using JavaScript we can also manipulate CSS properties on elements.</p>
+            <p>There are 2 main ways to do this: we can change the css properties directly or we can remove and apply different CSS classes.</p>
+        </section>
+        
+        <section>
+            <h2>Chaning CSS Properties</h2>
+            <textarea class="codearea">
+var el = document.querySelector('#id');
+el.onclick = function(e) {
+  e.target.background = 'red';
+  e.target.fontSize = '24px';
+}
+//notice how font-size in CSS
+//becomes fontSize
+//e.target is also the same as el
+            </textarea>
+        </section>
+        
+        <section>
+            <h2>Adding and Removing Classes</h2>
+            <textarea class="codearea">
+var el = document.querySelector('#id');
+el.onclick = function(e) {
+  e.target.classList.remove('classA');
+  e.target.classList.add('classB');
+}
+//the classList property is a list of all
+//CSS classes for the element
+//use the add and remove methods to change this list
+            </textarea>
+        </section>
+        
+        <section>
+            <h2>Example</h2>
+            <iframe height='500' scrolling='no' src='//codepen.io/mattlockyer/embed/NqLxbq/?height=500&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mattlockyer/pen/NqLxbq/'>NqLxbq</a> by Matt Lockyer (<a href='http://codepen.io/mattlockyer'>@mattlockyer</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+        </section>
+        
+        <section>
+            <h2>Why no Jquery?</h2>
+            <p>Because jQuery doesn't teach you JavaScript, it teaches you jQuery...</p>
+            <p>jQuery was created by John Resig to solve cross browser compatability issues with JavaScript implementations.</p>
+            <p>Inconsistencies may still exist, but in a modern web world we should learn and understand the basics of JavaScript.</p>
+        </section>
+        
+        <section>
+            <h1>JavaScript - References</h1>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">MDN - Introduction to JavaScript</a></li>
+                <li><a href="https://www.codecademy.com/tracks/javascript">Codecademy - JavaScript</a></li>
+                <li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+                <li><a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning JavaScript Design Patterns</a></li>
+            </ul>
+        </section>
+        
+        
+        <section>
+          <h1>That's It</h1>
+        </section>
+
+    </div>
+</div>
+

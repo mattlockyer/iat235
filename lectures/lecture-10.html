@@ -1,0 +1,240 @@
+
+
+
+<div class="reveal">
+    <div class="slides">
+                
+        <section>
+          <h1>CSS Animations</h1>
+        </section>
+       
+        <section>
+          <h2>Final Project Recap</h2>
+          <ul>
+              <li>Redesign of Craigslist Section</li>
+              <li>Focus on Layout, Structure and Hierarchy of Information</li>
+              <li>Finding an Item</li>
+              <li>Posting an Item</li>
+              <li>Responsive Design (this week and next)</li>
+              <li>Polished Design (final weeks)</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Structure your Submissions</h2>
+          <p>Please include an index.html file that takes the user to your first page!</p>
+          <p>Every website is a folder of documents, index.html is the default file served up.</p>
+          <p>Check out some info on <a href="http://www.htmlquick.com/tutorials/organizing-website.html">file structure</a>.</p>
+        </section>
+        
+        <section>
+          <h2>Plagiarism</h2>
+          <ul>
+              <li>Cite ALL Sources</li>
+              <li>Do NOT Copy Templates</li>
+              <li>Learn, Mimic, Adapt, Modify but DO NOT COPY</li>
+              <li>Produce a Cohesive Final Project</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Frameworks</h2>
+          <h1>NO</h1>
+          <p>You are NOT allowed to use any CSS or JS frameworks that provide grids, layouts, styling, animations etc...</p>
+          <p>This course is about developing your skillz</p>
+        </section>
+        
+        <section>
+          <h2>Sass / Less</h2>
+          <h1>FINE</h1>
+          <p>But don't bother your TAs with questions about Sass and Less...</p>
+          <p>If you want to streamline the way you write CSS that's your deal.</p>
+          <p>We will help you with the COMPILED CSS ONLY</p>
+        </section>
+        
+        
+        
+        <section>
+          <h1>Transition</h1>
+        </section>
+        
+        <section>
+            <h2>Introduction to Transitions</h2>
+            <p>CSS Transitions allow us to specify how properties will change over time. This can be used on a single element with a pseudo class to provide visual feedback that uses motion.</p>
+            <p>A canonical example: a drop down menu that slides down when activated by hovering over another element.</p>
+            <p>Where else could we use transitions?</p>
+        </section>
+        
+        <section>
+            <h2>Components of Transitions</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">Animatable propertys</a></li>
+                <li>An initial state</li>
+                <li>A final state</li>
+                <li>A duration</li>
+                <li>A delay (optional)</li>
+                <li>A <a href="http://easings.net/">timing function</a> (optional)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>A basic example</h2>
+            <textarea class="codearea">
+.box {
+  width:100px;
+  height:100px;
+  background:red;
+  transition:background-color 2s;
+}
+.box:hover {
+  background:blue;
+}
+            </textarea>
+        </section>
+        
+        <section>
+            <h2>Multiple Properties example</h2>
+            <textarea class="codearea">
+.box {
+  width:100px;
+  height:100px;
+  background:red;
+  transition:width 1s, height 1s, background-color 2s;
+}
+.box:hover {
+  width:200px;
+  height:50px;
+  background:blue;
+}
+            </textarea>
+        </section>
+        
+        <section>
+            <h2>Performance</h2>
+            <p>CSS Transitions don't just happen... The browser must re-render and reflow layouts constantly during an animation.</p>
+            <p>There are some properties we can use that incur the least performance penalty, these are CSS Transforms</p>
+        </section>
+        
+        <section>
+            <h2>Transforms</h2>
+            <p>CSS Transforms allow us to change the location, scale, rotation and opacity of an element. These correspond to translate, scale, rotation and opacity.</p>
+            <textarea class="code">
+transform: translate(10px, 10px) rotate(30deg) scale(2, 4);
+opacity: 0.1;
+            </textarea>
+            <p>These transitions are computed on the GPU and a seperate layer so they are fast and don't force your layouts to reflow.</p>
+            <p>We control transforms the same way we control any other CSS Animatable Property transition</p>
+        </section>
+        
+         <section>
+            <h2>Controlling Transforms</h2>
+            <textarea class="codearea">
+.box {
+  width:100px;
+  height:100px;
+  background:red;
+  transition:transform 1s;
+}
+.box:hover {
+  transform:scale(2, 0.5);
+}
+            </textarea>
+        </section>
+        
+        <section>
+          <h1>Transition - Refs</h1>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">MDN Using CSS Transitions</a><br />
+          <a href="https://css-tricks.com/almanac/properties/t/transition/">CSS Tricks - Transition</a><br />
+          <a href="https://developer.mozilla.org/en/docs/Web/CSS/transition">MDN - Transition</a><br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">MDN - Transforms</a><br />
+          
+        </section>
+        
+    
+        
+        
+        
+        <section>
+          <h1>Animation</h1>
+        </section>
+        
+        <section>
+            <h2>The Animation Property</h2>
+            <p>In CSS we can animate several properties using the animate property. This also provides us the ability to specify keyframes and create more complex animations.</p>
+            <p>A keyframe in traditional animation is a frame in the animation sequence that marks a big change. Think of this as a car turning a corner, we need a keyframe at the corner to make the turn.</p>
+        </section>
+        
+        <section>
+            <h2>Components of the Animation Property</h2>
+            <ul>
+                <li>Name</li>
+                <li>Duration</li>
+                <li>Timing Function (optional)</li>
+                <li>Delay (optional)</li>
+                <li>Direction (optional)</li>
+                <li>Iteration Count (optional)</li>
+                <li>Fill Mode (optional)</li>
+                <li>Play State (optional)</li>
+            </ul>
+        </section>
+        
+        <section>
+          <h1>Animation - Example</h1>
+          <textarea class="codearea">
+.box {
+  width:100px;
+  height:100px;
+  background-color:#0000FF;
+}
+.box:hover {
+  animation:pulse 2s 1;
+  animation-fill-mode:forwards;
+}
+@keyframes pulse {
+  0% {
+    background-color:#0000FF;
+  }
+  50% {
+    background-color:#00FF00;
+  }
+  100% {
+    background-color:#FF0000;
+  }
+}
+          </textarea>
+        </section>
+        
+        <section>
+            <h2>Differences Between Animations and Transitions</h2>
+            <p>Transitions specify the animation that should be applied to a change in a specific or multiple CSS properties, while Animations provide a framework for named animations that can alter multiple CSS properties and provides a keyframing system that can change properties multiple times over the course of one animation.</p>
+        </section>
+        
+        <section>
+            <h2>Performance</h2>
+            <p>CSS Animations suffer from the same performance issues as Transitions.</p>
+            <p>Likewise, CSS transforms incur the least performance penalties.</p>
+        </section>
+        
+        <section>
+            <h2>Which do I use where?</h2>
+            <p>First off... be sensible about your use of both Transitions and Animations, why are you using them and where? Does it help your user?</p>
+            <p>For this project, transitions should be sufficient.</p>
+            <p>If you are creating something more complex, you may want to practice using animations.</p>
+        </section>
+        
+        <section>
+          <h1>Animation - Refs</h1>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_animations">MDN Using CSS Animations</a><br />
+          <a href="https://css-tricks.com/almanac/properties/a/animation/">CSS Tricks - Animation</a><br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">MDN - Animation</a><br />
+          
+        </section>
+        
+        
+        <section>
+          <h1>That's It</h1>
+        </section>
+
+    </div>
+</div>
+
